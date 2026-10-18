@@ -1,0 +1,300 @@
+/* ============================
+   Estilos generales
+   ============================ */
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ============================
+   Formulario buscador
+   ============================ */
+#buscador {
+    background: #ffffff;
+    padding: 18px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #4a5568;
+    width: fit-content;
+}
+
+#buscador input[type="text"] {
+    padding: 9px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95em;
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    width: 220px;
+}
+
+#buscador input[type="text"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+#buscador input[type="submit"] {
+    padding: 9px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.25s;
+}
+
+#buscador input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(102, 126, 234, 0.35);
+}
+
+#buscador input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ============================
+   Tabla
+   ============================ */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    font-size: 0.95em;
+    /* Anula el atributo border='1' del HTML */
+    border: none !important;
+}
+
+/* Cabecera */
+table tr:first-child {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+}
+
+table th,
+table tr:first-child td {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.82em;
+    letter-spacing: 0.6px;
+}
+
+/* Celdas */
+table td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #edf2f7;
+    color: #2d3748;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+
+/* Filas alternas */
+table tr:nth-child(even):not(:first-child) {
+    background: #f9fafc;
+}
+
+/* Hover de fila */
+table tr:hover:not(:first-child) {
+    background: #eef1ff;
+    transition: background 0.2s ease;
+}
+
+/* Quitar borde de la última fila */
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================
+   Enlaces Editar / Borrar
+   ============================ */
+table td a {
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+    color: #fff;
+}
+
+/* Botón Editar (por posición: 5ª columna) */
+table td:nth-child(5) a {
+    background: #4299e1;
+}
+
+table td:nth-child(5) a:hover {
+    background: #3182ce;
+    transform: translateY(-1px);
+}
+
+/* Botón Borrar (6ª columna) */
+table td:nth-child(6) a {
+    background: #f56565;
+}
+
+table td:nth-child(6) a:hover {
+    background: #e53e3e;
+    transform: translateY(-1px);
+}
+
+/* ============================
+   Responsive (móvil)
+   ============================ */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 0.85em;
+    }
+
+    table td, table th {
+        padding: 10px 8px;
+    }
+
+    #buscador {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    #buscador input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ============================
+   Formulario de inserción
+   ============================ */
+form:not(#buscador) {
+    background: #ffffff;
+    padding: 35px 45px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+form:not(#buscador) p {
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9em;
+    letter-spacing: 0.3px;
+}
+
+form:not(#buscador) input[type="text"],
+form:not(#buscador) input[type="date"],
+form:not(#buscador) input:not([type]) {
+    margin-top: 8px;
+    padding: 10px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    color: #2d3748;
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    background: #f9fafc;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+form:not(#buscador) input[type="text"]:focus,
+form:not(#buscador) input[type="date"]:focus,
+form:not(#buscador) input:not([type]):focus {
+    border-color: #667eea;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+form:not(#buscador) input[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.25s;
+}
+
+form:not(#buscador) input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(102, 126, 234, 0.4);
+}
+
+form:not(#buscador) input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+/* ============================
+   Enlace-botón (para volver, ir a, etc.)
+   ============================ */
+a.boton {
+    display: inline-block;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+    transition: transform 0.15s, box-shadow 0.25s, background 0.25s;
+    margin-top: 10px;
+}
+
+a.boton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(102, 126, 234, 0.4);
+    color: #ffffff;
+}
+
+a.boton:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Variante secundaria (gris) por si la necesitas */
+a.boton.secundario {
+    background: #e2e8f0;
+    color: #4a5568;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+a.boton.secundario:hover {
+    background: #cbd5e0;
+    color: #2d3748;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}

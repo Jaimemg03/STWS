@@ -1,0 +1,240 @@
+/*
+ * Archivo: css/mensaje.css
+ * Empleado utilizando el prompt del usuario para la práctica CRUD (@CRUD).
+ * Modelo de referencia: @CRUD/estilo.css
+ */
+
+/* ============================
+   Bienvenida (coherente con estilo.css)
+   ============================ */
+.bienvenida {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.25em;
+    margin: 0 0 25px 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ============================
+   Formulario de mensajes
+   ============================ */
+.Formulario {
+    background: #ffffff;
+    padding: 35px 45px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    border: none;
+}
+
+.Formulario legend {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 1em;
+    letter-spacing: 0.3px;
+    margin-bottom: 18px;
+    padding: 0;
+    width: auto;
+    border: none;
+}
+
+.Etiqueta {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9em;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.Valor {
+    margin-bottom: 18px;
+}
+
+.SEtiqueta_DE,
+.SValor {
+    margin-bottom: 12px;
+}
+
+.SEtiqueta_MENSAJE {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9em;
+    margin-bottom: 6px;
+}
+
+input[type="text"].SMensaje,
+select.SDE,
+select.Para {
+    margin-top: 8px;
+    padding: 10px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    color: #2d3748;
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    background: #f9fafc;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+select.SDE,
+select.Para {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234a5568'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 35px;
+}
+
+textarea.TA_Mensaje {
+    margin-top: 8px;
+    padding: 10px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    color: #2d3748;
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    background: #f9fafc;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="text"].SMensaje:focus,
+select.SDE:focus,
+select.Para:focus,
+textarea.TA_Mensaje:focus {
+    border-color: #667eea;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* Botones tipo btn (estilo @CRUD/estilo.css) */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.25s, background 0.25s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(102, 126, 234, 0.4);
+    color: #ffffff;
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-large {
+    padding: 12px 20px;
+    font-size: 1em;
+}
+
+/* ============================
+   Listado de mensajes (Tuplas)
+   ============================ */
+.Contenedor {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.Lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.Tupla {
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.Remitente {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.95em;
+}
+
+.Fecha {
+    font-size: 0.85em;
+    color: #718096;
+    margin-bottom: 4px;
+}
+
+.Separador {
+    height: 8px;
+}
+
+.Mensaje {
+    color: #2d3748;
+    font-size: 0.95em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.Boton1,
+.Boton2 {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.Nuevo {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* ============================
+   Responsive (móvil)
+   ============================ */
+@media (max-width: 768px) {
+    .Formulario {
+        padding: 25px 20px;
+        max-width: 100%;
+    }
+
+    .Contenedor {
+        padding: 0 15px;
+    }
+
+    .Tupla {
+        padding: 14px 16px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
